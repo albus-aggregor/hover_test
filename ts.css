@@ -78,60 +78,121 @@ body{
 .i1{
 	width: 300px;
 	height: 300px;
-	border-right: 1px solid #363636;
-	border-bottom: 1px solid #363636;
+	border-right: 1px solid #242121;
+	border-bottom: 1px solid #242121;
 	padding: 10px;
 	position: relative;
 	overflow: hidden;
 }
-.i12 img{
-	width: 73%;
-	border-radius: 50%;
+.i1:hover::after {
+  content:'';
+  position: absolute;
+  background-color: #f7ac54;
+  width: 1px;
+  height: 26%;
+  top: 0;
+  left:0; 
 }
-.i12 {
-    position: absolute;
-    left: 20%;
-    top: 18%;
-    transition: 2s ease;
+.i1:hover::before{
+  content:'';
+  position: absolute;
+  background-color: #f7ac54;
+  width: 29%;
+  height: 1px;
+  top: 0;
+  left:0;
 }
-.i1:hover{
-	border-left: 1px solid #f7ac54;
-	border-top: 1px solid #f7ac54;
+.i1::after {
+  content:'';
+  position: absolute;
+  background-color: #f7ac54;
+  width: 0;
+  height: 0;
+  top: 0;
+  left:0; 
+  transition: 1s ease;
 }
-.i1:hover .i12{
-	position: absolute;
-	top: 4%;
-	left: 5%;
-}
-.i1:hover img{
-	width: 60px;
-	height: 60px;
+.i1::before{
+  content:'';
+  position: absolute;
+  background-color: #f7ac54;
+  width: 0;
+  height: 0;
+  top: 0;
+  left:0;
+  transition: 1s ease;
 }
 .i14{
 	position: absolute;
 	left: 25%;
-	top:111%;
-	transition: 1s ease;
+	top:42%;
+	transition: .2s ease;
+	opacity: 0;
+	line-height: 1.8;
 }
-.i13 {
+.i13{
+    position: absolute;
+    top: 74%;
+    left: 22%;
+    text-align: center;
+    transition: .8s ease;
+    transition-delay: .1s;
+}
+.i13 h3, .i131 h3, .i132 h3, .i133 h3{
+	color: #f7ac54;
+}
+.i1:hover .i13, .i1:hover .i131,.i1:hover .i132,.i1:hover .i133{
+	transform: rotateZ(90deg);
+    position: absolute;
+    left: -13%;
+    top: 50%;
+}
+.i131{
+    position: absolute;
+    top: 74%;
+    left: 26%;
+    text-align: center;
+    transition: .8s ease;
+    transition-delay: .1s;
+}
+.i132{
     position: absolute;
     top: 74%;
     left: 27%;
     text-align: center;
-    transition: 1s ease;
+    transition: .8s ease;
+    transition-delay: .1s;
 }
-.i13 h3{
-	color: #f7ac54;
-}
-.i1:hover .i13{
-	transform: rotateZ(90deg);
+.i133{
     position: absolute;
-    left: -11%;
-    top: 50%;
+    top: 74%;
+    left: 27%;
+    text-align: center;
+    transition: .8s ease;
+    transition-delay: .1s;
 }
 .i1:hover .i14{
 	position: absolute;
 	left:31%;
-	top: 5%;
-	line-height: 1.8;
+	top: 2%;
+	opacity: .5;
+	transition: .8s linear;
+	transition-delay: 1s;
+}
+ .i1 img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 22%;
+    left: 25%;
+    transition:  .8s ease;
+    transition-delay: .1s;
+    z-index: 99999;
+}
+.i1:hover img{
+    top: 4%;
+    left: 5%;
+    width: 60px;
+    height: 60px;
 }
